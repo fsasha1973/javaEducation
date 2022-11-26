@@ -1,16 +1,18 @@
 package lr1;
 
 import java.util.Scanner;
-
+import java.time.Year;
 public class Example10 {
     public static void main(String[] args) {
+
         Scanner in = new Scanner(System.in);
-        final int current = 2022;
-        System.out.println("Input year of birth: ");
-        int yearOfBirth = in.nextInt();
-        int age = current - yearOfBirth;
-        System.out.println("age = ");
 
+        System.out.println("Ваш год рождения?");
+        int year = in.nextInt();
+        int yearNow = Year.now().getValue();
+        int number = yearNow - year;
 
+        System.out.println("Ваь " + number);
+        in.close();
     }
 }
