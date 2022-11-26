@@ -12,7 +12,7 @@ public class Example10 {
         int yearNow = Year.now().getValue();
         int number = yearNow - year;
 
-        System.out.println("Ваь " + number);
+        System.out.println("Вам " + number);
         in.close();
     }
 }
