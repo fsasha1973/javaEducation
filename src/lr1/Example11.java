@@ -14,7 +14,8 @@ public class Example11 {
         int yearNow = Year.now().getValue();
         int number = yearNow - year;
 
-        System.out.println("Имя: " + name + number);
+        System.out.println("Name: " + name);
+        System.out.println("Возраст: " + number);
         in.close();
     }
 }
