@@ -8,6 +8,8 @@ public class Example5 {
 
         System.out.println("Введите число");
         int n = in.nextInt();
-        System.out.println("Количество тысяч в числе: " + (n/1000)%10);
+        int result = n / 1000;
+
+        System.out.println("Количество тысяч в числе: " + result);
     }
 }
