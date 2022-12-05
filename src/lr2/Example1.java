@@ -10,9 +10,11 @@ public class Example1 {
 
         int result = x % 3;
         if (result == 0){
-            System.out.println("Введеное число делится на три без остатка");
+            System.out.println("Введеное число делится на " +
+                    "три без остатка");
         } else {
-            System.out.println("Введеное число не делится на три без остатка");
+            System.out.println("Введеное число не делится " +
+                    "на три без остатка");
         }
     }
 }
