@@ -31,7 +31,7 @@ public class Example10 {
 
         System.out.println("Минимальный элемент " + minimal);
 
-        List<Integer> list = new ArrayList<Integer>();          //list of minimals' indexes
+        List<Integer> list = new ArrayList<Integer>();
 
         for (int i = 0; i < arr.length; i++){
             if(arr[i] == minimal){
@@ -41,7 +41,7 @@ public class Example10 {
 
         if(list.size() == 1){
             for (int kl = 0; kl < list.size(); kl++){
-                System.out.print("Position is " + list.get(kl));
+                System.out.print("Позиция " + list.get(kl));
             }
         } else {
             System.out.print("Его позиция ");

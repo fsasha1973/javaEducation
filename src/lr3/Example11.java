@@ -1,18 +1,23 @@
 package lr3;
 
-import java.util.Arrays;
-import java.util.Random;
-import java.util.Scanner;
+import java.util.*;
 
 public class Example11 {
     public static void main(String[] args) {
-        int[] Array = new int[10];
+        int[] size = new int[10];
         Random random = new Random();
 
         for (int i = 0; i < 10; i++){
-            Array[i] = random.nextInt( 100);
-            System.out.println(Array[i]);
+            size[i] = random.nextInt( 100);
+            System.out.println(size[i]);
         }
+        int[] sizeDesc = Arrays.stream(size).boxed()
+        .sorted(Collections.reverseOrder())
+                .mapToInt(Integer::intValue)
+                .toArray();
+        System.out.println(Arrays.toString(sizeDesc));
+
+
     }
 }
 //Напишите программу, в которой создается целочисленный
