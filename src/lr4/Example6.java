@@ -4,28 +4,37 @@ import java.util.Random;
 
 public class Example6 {
     public static void main(String[] args) {
-        Random random = new Random(100);
-        int a = 5;
-        int b = 3;
-        int[][] Array = new int [a][b];
-        int i;
-        int j;
-        for (i = 0; i < a; i++){
-            for (j = 0; j < b; j++){
-                Array[i][j] = random.nextInt(100);
-                System.out.println("i = "+i+"; j= "+j+"; value= "+Array[i][j]);
-            }
-        }
-        System.out.println("==================");
+        int[][] data = new int[5][10];
+        Random r = new Random();
 
-        int[][] tooArray = new int[b][a];
-        for (i = 0; i < b; i++){
-            for (j = 0; j < a; j++){
-                tooArray[i][j] = Array[j][i];
-                System.out.println("i = "+i+";j= "+j+";value= "+tooArray[i][j]);
+        for (int i = 0; i < 5; i++) {
+            for (int j = 0; j < 10; j++) {
+                data[i][j] = r.nextInt(100);
             }
         }
 
+        System.out.println("==========");
+        for (int i = 0; i < 5; i++) {
+            for (int j = 0; j < 10; j++) {
+                System.out.print(data[i][j] + " ");
+            }
+            System.out.println();
+        }
+
+        int[][] transposed = new int[10][5];
+        for (int i = 0; i < 10; i++) {
+            for (int j = 0; j < 5; j++) {
+                transposed[i][j] = data[j][i];
+            }
+        }
+
+        System.out.println("\r\n========");
+        for (int i = 0; i < 10; i++) {
+            for (int j = 0; j < 5; j++) {
+                System.out.print(transposed[i][j] + " ");
+            }
+            System.out.println();
+        }
     }
 }
 // Напишите программу, в которой создается двумерный целочисленный

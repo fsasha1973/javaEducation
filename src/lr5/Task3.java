@@ -1,42 +1,22 @@
 package lr5;
 
 public class Task3 {
-    private int num1;
-    private int num2;
-
-    Task3(){
-        System.out.println("Task3(1)\n");
+    // два целочисленных поля.
+    public int a;
+    public int b;
+    // Конструктор без передачи аргумента.
+    public Task3() {
+        this.a = 0;
+        this.b = 0;
     }
-    Task3(int num1){
-        System.out.println("Task3(2)");
-        this.num1 = num1;
-        System.out.println("num1;num1 = " + exhibitor (num1) +"\n");
+    // Конструктор с передачей одного аргумента.
+    public Task3(int a) {
+        this.a = a;
+        this.b = 0;
     }
-    public int exhibitor (int num1){
-        this.num1 = num1;
-        int result = 1;
-        for (int i = 1; i <= num1; i++){
-            result = num1 * result;
-        }
-        return result;
+    // Конструктор с передачей двух аргумента.
+    public Task3(int a, int b) {
+        this.a = a;
+        this.b = b;
     }
-    Task3(int num1, int num2){
-        System.out.println("Task3(3)");
-        this.num1 = num1;
-        this.num2 = num2;
-        System.out.println("num1;num2 = " + exhibitorOn (num1, num2) + "\n");
-    }
-    public int exhibitorOn (int a1, int a2){
-        a1 = num1;
-        a2 = num2;
-        int result = 1;
-        for (int i = 1; i <= num2; i++) {
-            result = num1 * result;
-        }
-        return result;
-    }
-
-
-
-
 }

@@ -1,31 +1,55 @@
 package lr5;
 
 public class Task6 {
-    private int min;
+    //два закрытых целочисленных поля (max и min).
     private int max;
-
-    public void Arg(int n1, int n2){
-        System.out.println("Метод с 2-мя аргументами");
-        min = Math.min(n1, n2);
-        max = Math.max(n1, n2);
+    private int min;
+    //Значения полям присваиваются с помощью открытого метода.
+    public Task6(int a) { // сравниваются текущие значения полей и значения аргументов, переданных методу.
+        if (a > 0) {      // Самое большое из значений присваивается полю max, а самое маленькое из значений присваивается полю min.
+            this.max = a;
+            this.min = 0;
+        } else {
+            this.max = 0;
+            this.min = a;
+        }
     }
-    public void Arg(int n){
-        System.out.println("Метод с 1-м аргументом");
-        min = Math.min(min, n);
-        max = Math.max(max, n);
+    // сравниваются текущие значения полей и значения аргументов, переданных методу.
+    // Самое большое из значений присваивается полю max, а самое маленькое из значений присваивается полю min.
+    public Task6(int a, int b) {
+        if (a > b) {
+            int c = b;
+            b = a;
+            a = c;
+        }
+        this.min = a;
+        this.max = b;
     }
-    void PrintInt(){
-        System.out.println("min = " + min);
-        System.out.println("max = " + max);
+    //конструктор, который работает по тому же принципу, что и метод для присваивания значений полям
+    public void setValues(int a, int b) {
+        if (a > b) {
+            int c = b;
+            b = a;
+            a = c;
+        }
+        if (a < this.min) {
+            this.min = a;
+        }
+        if (b > this.max) {
+            this.max = b;
+        }
     }
-    Task6(int n1, int n2){
-        System.out.println("Конструктор с 2-мя аргументами");
-        min = Math.min(n1, n2);
-        max = Math.max(n1, n2);
+    //конструктор, который работает по тому же принципу, что и метод для присваивания значений полям
+    public void setValue(int a) {
+        if (a > this.max) {
+            this.max = a;
+        }
+        if (a < this.min) {
+            this.min = a;
+        }
     }
-    Task6(int n){
-        System.out.println("Конструктор с 1-м агрументом");
-        min = Math.min(min, n);
-        max = Math.max(max, n);
+    //метод, отображающий в консольном окне значения полей объекта.
+    public void print() {
+        System.out.println(this.min + " " + this.max);
     }
 }

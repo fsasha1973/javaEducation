@@ -2,14 +2,16 @@ package lr5;
 
 public class Example6 {
     public static void main(String[] args) {
-        Task6 task = new Task6(4, 20);
-        task.PrintInt();
-        task = new Task6(3);
-        task.PrintInt();
-        task.Arg(2, 12);
-        task.PrintInt();
-        task.Arg(-3);
-        task.PrintInt();
+        Task6 d = new Task6(1, 2);
+        d.print();
+        d.setValue(5);
+        d.print();
+        d.setValue(0);
+        d.print();
+        d = new Task6(-5);
+        d.print();
+        d.setValues(15, 3);
+        d.print();
 
     }
 }

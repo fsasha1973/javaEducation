@@ -8,13 +8,13 @@ public class Example1 {
         int z; // переменная необходима для вывода служебного сообщения о количества символов в строке;
 
         for (i = 1 ; i <= figure; i++) {
-            System.out.print("номер строки " + i + " ");
+            System.out.print(i + " ");
             z = 0;
              for (j = -5; j < figure; j++) {
                  System.out.print("+");
                  z = z + 1;
              }
-            System.out.println(" Количество символов в строке " + z);
+            System.out.println( + z);
         }
     }
 }

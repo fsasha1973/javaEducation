@@ -8,12 +8,12 @@ public class Example6 {
         System.out.println("Ввведите количество чисел в сумме");
         int x = id.nextInt();
 
-        CalcNums.ForCalcNums(x);
+        CalcNumbs.ForCalcNumbs(x);
     }
 
-    private static class CalcNums {
+    private static class CalcNumbs {
 
-        private static void ForCalcNums(int x) {
+        private static void ForCalcNumbs(int x) {
 
             int sum = 0;
             for (int i = 0; x > 0; i++) {

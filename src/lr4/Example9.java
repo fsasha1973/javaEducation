@@ -22,20 +22,19 @@ public class Example9 {
         while (!cool) {
             String reply = id.next();
 
-            if (reply.toLowerCase().equals("y")) {
+            if (reply.equalsIgnoreCase("y")) {
                 String geEncryptString = Encrypt.geEncryptString(encryptString, shift);
                 System.out.println(geEncryptString);
                 cool = true;
             }
 
-            else if (reply.toLowerCase().equals("n")) {
+            else if (reply.equalsIgnoreCase("n")) {
                 System.out.println("До свидания!");
                 cool = true;
             }
 
             else {
                 System.out.println("Введите корректный ответ: ");
-                cool = false;
             }
         }
     }

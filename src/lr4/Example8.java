@@ -6,21 +6,21 @@ public class Example8 {
             int a = 9;
             int b = 8;
             int[][] Array = new int[a][b];
-            int hvost = 0;
-            int telo = 0;
+            int host = 0;
+            int tell = 0;
             int h = 0;
             for (int i = 0; h < Array.length ; h++) {
-                for (int j = 0; j <(Array[i].length - hvost); j++) {
-                    Array[i][j] = telo;
-                    telo++;
+                for (int j = 0; j <(Array[i].length - host); j++) {
+                    Array[i][j] = tell;
+                    tell++;
                 }
                 if(i< Array.length-1) {
                     i++;}
-                for (int o=a-1; o > hvost; o--) {
-                    Array[o][Array[i].length-1-hvost] = telo;
-                    telo++;
+                for (int o=a-1; o > host; o--) {
+                    Array[o][Array[i].length-1-host] = tell;
+                    tell++;
                 }
-                hvost++;
+                host++;
             }
             int z = 0;
             for (int i = 0; i < Array.length; i++){

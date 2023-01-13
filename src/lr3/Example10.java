@@ -22,16 +22,16 @@ public class Example10 {
             System.out.print(arr[i] + "\t");
         }
 
-        for (int j = 0; j < arr.length; j++){
-            if(arr[j] < minimal){
-                minimal = arr[j];
+        for (int value : arr) {
+            if (value < minimal) {
+                minimal = value;
             }
         }
         System.out.println();
 
         System.out.println("Минимальный элемент " + minimal);
 
-        List<Integer> list = new ArrayList<Integer>();
+        List<Integer> list = new ArrayList<>();
 
         for (int i = 0; i < arr.length; i++){
             if(arr[i] == minimal){
@@ -40,13 +40,13 @@ public class Example10 {
         }
 
         if(list.size() == 1){
-            for (int kl = 0; kl < list.size(); kl++){
-                System.out.print("Позиция " + list.get(kl));
+            for (Integer integer : list) {
+                System.out.print("Позиция " + integer);
             }
         } else {
             System.out.print("Его позиция ");
-            for (int kl = 0; kl < list.size(); kl++) {
-                System.out.print(list.get(kl) + " || ");
+            for (Integer integer : list) {
+                System.out.print(integer + " || ");
             }
         }
     }

@@ -1,27 +1,15 @@
 package lr4;
 
+import java.util.Arrays;
+
 public class Example4 {
     public static void main(String[] args) {
-        int height = 5;
-        int width = 9;
-        int i;
-        int j;
-        int [][] graph = new int [height][width];
-        int z = 0;
-        for (i =0; i < height; i++){
-            for (j = 0; j <width; j++){
-                graph[i][j] = 2;
-            }
+        char[][] rectangle = new char[10][20];
+        for (int i = 0; i < 10; i++) {
+            Arrays.fill(rectangle[i], '2');
         }
-        for (i =0; i < height; i++){
-            int count = i+1;
-            System.out.print(" ");
-            for (j = 0; j <width; j++){
-                System.out.print(graph[i][j]+" ");
-                z++;
-            }
-            System.out.println(" ");
-            z = 0;
+        for (int i = 0; i < 10; i++) {
+            System.out.println(rectangle[i]);
         }
 
     }

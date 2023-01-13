@@ -8,6 +8,7 @@ public class Task1 {
     }
 
     public int getCodeSymbol(){
+
         return ch1;
     }
     public void snowCodeAndValue(){

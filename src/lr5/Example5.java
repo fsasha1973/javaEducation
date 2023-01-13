@@ -2,21 +2,16 @@ package lr5;
 
 public class Example5 {
     public static void main(String[] args) {
-        Task5 task = new Task5(25); //конструктор
-        System.out.println("Число = " + task.PrintInt());
-
-        task.Arg(30); //метод с аргументом
-        System.out.println("Число = " + task.PrintInt());
-
-        task.Arg(140); //метод с аргументом больше 100
-        System.out.println("Число = " + task.PrintInt());
-
-        task.Arg(-30); //метод с аргументом меньше 0
-        System.out.println("Число = " + task.PrintInt());
-
-        task.Arg(); //метод без аргумента
-        System.out.println("Число = " + task.PrintInt());
-
+        Task5 d1 = new Task5();
+        System.out.println(d1.getValue());
+        d1.setValue(123);
+        System.out.println(d1.getValue());
+        d1.setValue();
+        System.out.println(d1.getValue());
+        d1.setValue(5);
+        System.out.println(d1.getValue());
+        Task5 d2 = new Task5(234);
+        System.out.println(d2.getValue());
     }
 }
 //Напишите программу с классом, у которого есть закрытое целочисленное

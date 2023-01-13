@@ -1,21 +1,17 @@
 package lr5;
 
 public class Task4 {
-    private char ch1;
-    private int int1;
-
-    Task4 (int i, char b){
-        this.ch1 = b;
-        this.int1 = i;
-        int lenght = (int) (Math.log(int1) + 1);
-        double result = ch1 + int1 * 1 / Math.pow(10, lenght);
-        System.out.println("result1 = " + result + "; ch = " + (double) ch1 + "; int = " + lenght + "\n");
+    // Символьное и целочисленное поле.
+    public char c;
+    public int a;
+    // Конструктор с двумя аргументами.
+    public Task4(char c, int a) {
+        this.c = c;
+        this.a = a;
     }
-    Task4 (double d){
-        char ch1 = (char) d;
-        int1 = (int) ((d - (int) d) * 100);
-        System.out.println("ch = " + ch1 + "; int = " + int1 + "\n");
+    // Конструктор с одним аргументами типа double.
+    public Task4(double x) {
+        this.c = (char)x;
+        this.a = (char)((x - (char)x) * 100);
     }
-
-
 }

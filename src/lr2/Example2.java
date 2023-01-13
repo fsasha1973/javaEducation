@@ -1,12 +1,10 @@
 package lr2;
 
-import java.io.PrintWriter;
 import java.util.Scanner;
 
 public class Example2 {
     public static void main(String[] args) {
 
-        PrintWriter out = new PrintWriter(System.out);
         Scanner in = new Scanner(System.in);
 
         System.out.println("Введите любое целое число");
@@ -23,3 +21,6 @@ public class Example2 {
 
     }
 }
+//Напишите программу, которая проверяет, удовлетворяет ли введенное
+//пользователем число следующим критериям: при делении на 5 в остатке
+//получается 2, а при делении на 7 в остатке получается 1
