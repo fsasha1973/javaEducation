@@ -1,21 +1,18 @@
 package lr4;
 
+import java.util.Arrays;
+
 public class Example3 {
     public static void main(String[] args) {
-        int figure = 8;
-        int i;
-        int j;
-        int z = 0;
-        for (i = 1; i <= figure; i++) {
-            System.out.println(" ");
-            for (j = 0; j <= z; j++){
-                System.out.print("+");
-            }
-
-            z = z + 1;
+        char[][] rectangle = new char[10][20];
+        for (int i = 0; i < 10; i++) {
+            Arrays.fill(rectangle[i], '2');
         }
-        System.out.println(" ");
+        for (int i = 0; i < 10; i++) {
+            System.out.println(rectangle[i]);
+        }
+
     }
 }
-//Напишите программу, которая выводит в консольное окно
-//прямоугольный треугольник
+// Напишите программу, в которой создается двумерный массив, который
+//выводи прямоугольник из цифр 2

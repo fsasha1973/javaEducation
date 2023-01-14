@@ -4,24 +4,34 @@ import java.util.Scanner;
 
 public class Example5 {
     public static void main(String[] args) {
-        Scanner in = new Scanner(System.in);
+        Scanner id = new Scanner(System.in);
+        System.out.println("Ввведите количество чисел в сумме");
+        int x = id.nextInt();
 
-        int a = in.nextInt();
-        int b = in.nextInt();
+        CalcNumbs.ForCalcNumbs(x);
+    }
 
-        for (int i = a; i <= b; i++) {
-            System.out.println( + i);
+    private static class CalcNumbs {
+
+        private static void ForCalcNumbs(int x) {
+
+            int sum = 0;
+            for (int i = 0; x > 0; i++) {
+                if (i % 5 == 2 || i % 3 == 1) {
+                    System.out.printf("%d, ", i);
+                    sum = sum + i;
+                    x--;
+                }
+            }
+            System.out.printf("сумма чисел: %d", sum);
         }
-        while (a <= b) {
-            System.out.printf("%d, ", + a);
-            a++;
-        }
-
     }
 }
 
-//Напишите программу, в которой пользователем вводится два
-//целых числа. Программа выводит все целые числа — начиная с наименьшего
-//(из двух введенных чисел) и заканчивая наибольшим (из двух введенных
-//чисел). Предложите разные версии программы (с использованием разных
-//операторов цикла).
+//5. Напишите программу, в которой вычисляется сумма чисел,
+//удовлетворяющих таким критериям: при делении числа на 5 в остатке получается 2,
+// или при делении на 3 в остатке получается 1. Количество чисел в сумме
+//вводится пользователем. Программа отображает числа, которые
+//суммируются, и значение суммы. Предложите версии программы,
+//использующие разные операторы цикла.
+

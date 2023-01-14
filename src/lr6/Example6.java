@@ -2,7 +2,7 @@ package lr6;
 
 public class Example6 {
     public static void main(String[] args) {
-        int[] inArray = {-9, -8, -7, -6, -5, -4, -3, -2, -1, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9,};
+        int[] inArray = {-6, -5, -4, -3, -2, -1, 0, 1, 2, 3, 4, 5, 6,};
         System.out.println("Второй аргумент метода меньше длины массива");
         for (int i = 0; i < Task1.SetArray(inArray, 10).length; i++) {
             System.out.println("outArray[" + i + "] = " + Task1.SetArray(inArray, 10)[i]);

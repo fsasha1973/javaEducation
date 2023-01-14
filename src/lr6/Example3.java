@@ -13,7 +13,7 @@ public class Example3 {
             for (int j : array) {
                 max = Math.max(max, j);
             }
-            System.out.println("Maximum array[] = "+max);
+            System.out.println("Max array[] = "+max);
         }
         //наименьшее значение,
         private static void calcMin(int ... array){
@@ -21,7 +21,7 @@ public class Example3 {
             for (int j : array) {
                 min = Math.min(min, j);
             }
-            System.out.println("Minimum array[] = "+min);
+            System.out.println("Min array[] = "+min);
         }
         //среднее значение из набора чисел.
         private static void calcAvg(int ... array){

@@ -3,11 +3,12 @@ package lr6;
 public class Example2 {
     public static void main(String[] args) {
         Task task = new Task();
-        task.strim();
-        task.strim();
-        task.strim();
-        task.strim();
-    }
+        Task.strim();
+        Task.strim();
+        Task.strim();
+        Task.strim();
+
+        }
 
     public static class Task {
         private static int in1;

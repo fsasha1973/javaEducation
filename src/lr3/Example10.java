@@ -1,54 +1,25 @@
 package lr3;
 
 import java.util.*;
-import java.util.Random;
 
 public class Example10 {
     public static void main(String[] args) {
-        Random r = new Random();
+        int[] size = new int[10];
+        Random random = new Random();
 
-        int p = 10;
-
-        int k = 10;
-        int minimal = k;
-
-        int[] arr = new int[p];
-
-        for (int i = 0; i < arr.length; i++){
-            arr[i] = r.nextInt(k) + 1;
-            if(arr[i] < minimal){
-                minimal = arr[i];
-            }
-            System.out.print(arr[i] + "\t");
+        for (int i = 0; i < 10; i++){
+            size[i] = random.nextInt( 100);
+            System.out.println(size[i]);
         }
+        int[] sizeDesc = Arrays.stream(size).boxed()
+        .sorted(Collections.reverseOrder())
+                .mapToInt(Integer::intValue)
+                .toArray();
+        System.out.println(Arrays.toString(sizeDesc));
 
-        for (int value : arr) {
-            if (value < minimal) {
-                minimal = value;
-            }
-        }
-        System.out.println();
 
-        System.out.println("Минимальный элемент " + minimal);
-
-        List<Integer> list = new ArrayList<>();
-
-        for (int i = 0; i < arr.length; i++){
-            if(arr[i] == minimal){
-                list.add(i);
-            }
-        }
-
-        if(list.size() == 1){
-            for (Integer integer : list) {
-                System.out.print("Позиция " + integer);
-            }
-        } else {
-            System.out.print("Его позиция ");
-            for (Integer integer : list) {
-                System.out.print(integer + " || ");
-            }
-        }
     }
 }
-
+//Напишите программу, в которой создается целочисленный
+//массив, заполняется случайными числами и после этого значения элементов в
+//массиве сортируются в порядке убывания значений
