@@ -34,7 +34,6 @@ public class FileData1 {
                     writer.write(line + "\n");
                 }
             }
-            reader.close();
 
         } catch (IOException e) {
             e.printStackTrace();
