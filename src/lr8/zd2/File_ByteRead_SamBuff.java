@@ -20,7 +20,7 @@ public class File_ByteRead_SamBuff {
     }
 
     public static void main(String[] args) {
-        String fileName="C:\\tmp\\File2.txt";
+        String fileName="C:\\tmp\\File5.txt";
         InputStream inFile=null;
         try{
             inFile=new FileInputStream(fileName);
@@ -38,3 +38,5 @@ public class File_ByteRead_SamBuff {
         }
     }
 }
+//Прочитать и вывести на экран информацию из предварительно
+//созданного файла с использованием буфера в 5 байт.
