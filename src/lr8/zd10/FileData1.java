@@ -1,33 +1,24 @@
 package lr8.zd10;
 
 import java.io.*;
-import java.util.Scanner;
+
 
 public class FileData1 {
     public static void main(String[] args) throws IOException {
-        Scanner scanner = new Scanner(System.in);
+        File inputF = new File("C:\\tmp\\File5.txt");
+        File outputF = new File("C:\\tmp\\File2.txt");
 
-        // Вводим имя исходного файла
-        System.out.println("Введите имя исходного файла: ");
-        String sourceFileName = scanner.nextLine();
-
-        // Вводим имя результирующего файла
-        System.out.println("Введите имя результирующего файла: ");
-        String resultFileName = scanner.nextLine();
-
-        File sourceFile = new File(sourceFileName);
-        File resultFile = new File(resultFileName);
 
         // Создаем потоки для чтения и записи
-        try (BufferedReader reader = new BufferedReader(new FileReader(sourceFile));
-             BufferedWriter writer = new BufferedWriter(new FileWriter(resultFile))) {
+        try (BufferedReader reader = new BufferedReader(new FileReader(inputF));
+             BufferedWriter writer = new BufferedWriter(new FileWriter(outputF))) {
 
-            // Читаем вторую строку и записываем ее в результирующий файл
-            String num = reader.readLine();
-            num = reader.readLine();
-            writer.write(num);
+            // Читаем вторую строку и записываем ее в файл
+            String line = reader.readLine();
+            line = reader.readLine();
+            writer.write(line);
             writer.write("\n");
-            String line;
+            //Записываем положительные числа в файл
             while ((line = reader.readLine()) != null) {
                 double number = Double.parseDouble(line);
                 if (number > 0) {
@@ -35,10 +26,7 @@ public class FileData1 {
                 }
             }
 
-        } catch (IOException e) {
-            e.printStackTrace();
         }
-
     }
 }
 //Создать проект, позволяющий из одного, предварительно

@@ -7,10 +7,10 @@ import java.io.InputStream;
 import java.net.URL;
 
 public class Primer1 {
-    public static void readAllByByte(InputStream in) throws IOException{
-        while (true){
+    public static void readAllByByte(InputStream in) throws IOException {
+        while (true) {
             int oneByte = in.read();
-            if (oneByte != -1){
+            if (oneByte != -1) {
                 System.out.print((char) oneByte);
             } else {
                 System.out.print("/n" + "end");
@@ -18,6 +18,7 @@ public class Primer1 {
             }
         }
     }
+
     public static void main(String[] args) throws IOException {
         try {
             InputStream inFile = new FileInputStream("c:/tmp/text.txt");
@@ -30,14 +31,15 @@ public class Primer1 {
             System.out.print("\n\n\n");
             inUrl.close();
 
-            InputStream inArray = new ByteArrayInputStream(new byte[] {7,9,3,7,4});
+            InputStream inArray = new ByteArrayInputStream(new byte[]{7, 9, 3, 7, 4});
             readAllByByte(inArray);
             System.out.print("\n\n\n");
             inArray.close();
-        } catch (IOException e){
+        } catch (IOException e) {
             System.out.println("Ошибка: " + e);
         }
 
     }
-    
 }
+//Прочитать и вывести на экран информацию из трех источников:
+//файла на диске, интернет-страницы и массива типа byte

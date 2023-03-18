@@ -21,7 +21,7 @@ public class Files_byteRW_my2 {
                     new DataOutputStream( new FileOutputStream(f1));
             sc.nextLine(); //очистка буфера
             for (int i = 0; i < n; i++) {
-                System.out.print("Введите строку для записи в файл => ");
+                System.out.println("Введите строку для записи в файл => ");
                 String s=sc.nextLine();
                 dOut.writeUTF(s );
 //или dOut.writeUTF(s +"\n" ); – запись отдельных строк
@@ -40,3 +40,5 @@ public class Files_byteRW_my2 {
         }
     }
 }
+//Создать файл на диске, ввести заданное с клавиату- ры
+//количество строк текста и записать их в файл в формате UTF-8.
