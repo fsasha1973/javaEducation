@@ -6,6 +6,7 @@ import java.util.Scanner;
 public class FilesData {
     public static void main(String[] args) {
         try {
+            //Создание исходного файла и запись в него чисел типа float
             File f1=new File("C:\\tmp\\numIsh.txt");
             Scanner sc=new Scanner(System.in, "cp1251");
 
@@ -19,11 +20,12 @@ public class FilesData {
 
             wr.flush();
             wr.close();
-
+            //Создание второго файла и переписывание в него чисел из первого файла
             File f2=new File("C:\\tmp\\numRez.txt");
             f2.createNewFile();
-
+            //Поток для чтения из первого файла
             DataInputStream rd=new DataInputStream(new FileInputStream(f1.getAbsolutePath()));
+            //поток для записи во второй файл
             wr=new DataOutputStream(new FileOutputStream(f2.getAbsolutePath()));
 
             try {

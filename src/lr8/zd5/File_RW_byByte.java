@@ -7,12 +7,14 @@ public class File_RW_byByte {
         Reader in=null;
         Writer out=null;
         try {
-            in=new FileReader("C:\\tmp\\File1.txt");
-            out=new FileWriter("C:\\tmp\\File2.txt", true);
-            int oneByte;
+            in=new FileReader("C:\\tmp\\File1.txt"); //файл для чтения
+            out=new FileWriter("C:\\tmp\\File2.txt", true); //файл для записи
+            //Данные записываются побайтно, как и для
+            //InputStream/OutputStream
+            int oneByte;    //переменная, в которую считываются данные
             while ((oneByte=in.read()) !=-1){
-                // out.writer
-                out.write((char)oneByte);
+                // out.writer((char)oneByte);   //запись с удалением ранее существующих даннфх
+                out.write((char)oneByte);       //запись с добавлением данных в конец
                 System.out.print((char) oneByte);
             }
         }catch (IOException e){

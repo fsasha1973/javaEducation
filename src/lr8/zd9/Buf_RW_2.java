@@ -7,9 +7,11 @@ public class Buf_RW_2 {
         BufferedReader br = null;
         PrintWriter out = null;
         try {
+            //Создание потоков
             br = new BufferedReader(new InputStreamReader(
                     new FileInputStream("C:\\tmp\\MyFile1.txt"),"cp1251"));
             out = new PrintWriter("C:\\tmp\\MyFile2.txt","cp1251");
+            //Переписывание из одного файла в другой
             int lineCount=0;
             String s;
             while ((s=br.readLine())!=null) {

@@ -7,15 +7,19 @@ public class Buf_WR_IO_4 {
         BufferedReader br = null;
         BufferedWriter bw = null;
         try {
-            br = new BufferedReader(new InputStreamReader(new FileInputStream("C:\\tmp\\MyFile1.txt"),"cp1251"));
-            bw = new BufferedWriter(new OutputStreamWriter(new FileOutputStream("C:\\tmp\\MyFile2.txt"),"cp1251"));
-            int lineCount=0;
+            //Создание потоков для чтения и записи с нужной кодировкой
+            br = new BufferedReader(new InputStreamReader(new FileInputStream
+                    ("C:\\tmp\\MyFile1.txt"),"cp1251"));
+            bw = new BufferedWriter(new OutputStreamWriter(new FileOutputStream
+                    ("C:\\tmp\\MyFile2.txt"),"cp1251"));
+            //Переписывание информации из одного файла в другой
+            int lineCount=0;    //чтение строк
             String s;
             while ((s=br.readLine()) !=null){
                 lineCount++;
                 System.out.println(lineCount+":"+s);
-                bw.write(lineCount+":"+s);
-                bw.newLine();
+                bw.write(lineCount+":"+s);  //запись без перевода строки
+                bw.newLine();   //принудительный переход на новую строку
             }
         }catch (IOException e){
             System.out.println("Ошибка!!!!!!!");
