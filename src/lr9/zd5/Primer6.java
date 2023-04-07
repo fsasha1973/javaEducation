@@ -5,9 +5,10 @@ public class Primer6 {
         try {
             System.out.println("0");
             throw new NullPointerException("ошибка");
-        }catch (ArithmeticException e){
+        }catch (ArithmeticException e) {
             System.out.println("1");
-        }catch (NullPointerException e){ //Меняем Exception-предок, RuntimeException-потомок, программа не запустится
+        //}catch (Exception e){
+        }catch (NullPointerException e){
             System.out.println("2");
         }catch (RuntimeException e){
             System.out.println("3");

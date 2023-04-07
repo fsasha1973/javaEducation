@@ -14,7 +14,8 @@ public class Zadanie1 {
                 size= scanner.nextInt();
                 validInput=true;
             }catch (InputMismatchException e){
-                System.out.println("Ошибка: введено некорректное значение. Пожалуйста, введите целое число");
+                System.out.println("Ошибка: введено некорректное значение. " +
+                        "Пожалуйста, введите целое число");
                 scanner.next();
             }
         }
@@ -27,7 +28,8 @@ public class Zadanie1 {
                     intArray[i]=scanner.nextInt();
                     validInput=true;
                 }catch (InputMismatchException e){
-                    System.out.println("Ошибка: введено некорректное значение. Пожалуйста, введите целое число");
+                    System.out.println("Ошибка: введено некорректное значение. " +
+                            "Пожалуйста, введите целое число");
                     scanner.next();
                 }
             }
