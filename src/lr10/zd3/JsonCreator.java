@@ -1,8 +1,9 @@
 package lr10.zd3;
 
-import java.io.FileWriter;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
+
+import java.io.FileWriter;
 
 public class JsonCreator {
     public static void main(String[] args) {
@@ -24,12 +25,12 @@ public class JsonCreator {
 
         library.put("books", books);
 
-        try (FileWriter file = new FileWriter("C:\\Users\\YaralovIS\\IdeaProjects\\javaEducation\\src\\lr10\\zd1\\example-json.json")) {
+        try (FileWriter file = new FileWriter("C:\\tmp\\example-json.json")) {
             file.write(library.toJSONString());
             System.out.println("Json файл успешно создан!");
         }catch (Exception e){
-
+            e.printStackTrace();
         }
+
     }
 }
-//Как создать файл JSON

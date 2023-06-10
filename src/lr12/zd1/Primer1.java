@@ -25,6 +25,7 @@ public class Primer1 {
         System.out.println(Arrays.toString(arrResult));
     }
     public static int[] filterEventNumbers(int[] arr){
+
         return Arrays.stream(arr).filter(x -> x % 2 == 0).toArray();
     }
 }
